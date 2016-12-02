@@ -51,7 +51,7 @@ Edit these 2 lines of code with the appropriate tokens. The lyft bearer token is
   lyft_headers = {'Authorization' => 'bearer <<LYFT TOKEN GOES HERE>>'}
 ```
 
-  Edit all occurances of <<REPLACE WITH HOME LAT>> and <<REPLACE WITH HOME LON>> with the lat and lon of your home/starting point
+  Edit all occurances of _REPLACE WITH HOME LAT_ and _REPLACE WITH HOME LON_ with the lat and lon of your home/starting point
 
 ```css
       :url => 'https://api.uber.com/v1.2/estimates/price?start_latitude=<<REPLACE WITH HOME LAT>>&start_longitude=<<REPLACE WITH HOME LON>>&end_latitude='+ end_latitude + '&end_longitude=' + end_longitude,
