@@ -74,3 +74,5 @@ Please do ensure that your destination preset names above are also reflected in 
 
 # You are now ready to deploy the code to Heroku and test your custom skill!!
 
+NOTE: Ensure that you include Heroku Postgres (free tier) in your application. Deploy will fail if you do not include this add on.
+
