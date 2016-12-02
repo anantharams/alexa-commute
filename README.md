@@ -71,5 +71,6 @@ Edit this data with lat, long of  popular endpoints
 
 Please do ensure that your destination preset names above are also reflected in the slot value configuration (see Intent Configuration  section above)
 
-You are now ready to deploy the code to Heroku and test your custom skill!!
+
+# You are now ready to deploy the code to Heroku and test your custom skill!!
 
