@@ -97,7 +97,7 @@ def ConstructRidePayload (destination, wait_time, ride_time, low_price, high_pri
 	elsif lowest_fare == high_price
 		cheaper_service = 'Uber'
 	else
-		cheaper_service = 'Uber and Lift'
+		cheaper_service = 'Both Services'
 	end
 
 	if lowest_time == lyft_wait_time 
@@ -105,7 +105,7 @@ def ConstructRidePayload (destination, wait_time, ride_time, low_price, high_pri
 	elsif lowest_time == wait_time
 		faster_service = 'Uber'
 	else
-		faster_service = 'Uber and Lift'
+		faster_service = 'Both Services'
 	end
 
 	payload = {
