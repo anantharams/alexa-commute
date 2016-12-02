@@ -3,6 +3,7 @@ My Personal Alexa Skill to find commute time to the popular places I go to. You 
 
 Alexa Setup Screen 1
 
+Logo: ![Alt](/public/alexa1.png "Title")
 
 Alexa Setup Screen 2 
 
