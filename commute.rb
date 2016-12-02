@@ -129,7 +129,7 @@ end
 
 post '/ride' do
 	request_object = JSON.parse(request.body.read, object_class: OpenStruct)
-	defaultslot = 'Bus stop'		
+	defaultslot = 'Downtown'		
 	if request_object.request.type == 'LaunchRequest'
 		slot = defaultslot
 	elsif request_object.request.type == 'IntentRequest'
@@ -156,7 +156,7 @@ post '/ride' do
 		return_to_alexa = UberLyftAPIForRide(slot, dest[:coordinates])
 		p return_to_alexa
 	else
-		return_to_alexa = UberLyftAPIForRide('Bus Stop', '37.324639, -122.049359')
+		return_to_alexa = UberLyftAPIForRide('Downtown', '37.324639, -122.049359')
 		p return_to_alexa
 	end
 		
