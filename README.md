@@ -51,7 +51,7 @@ Edit these 2 lines of code with the appropriate tokens. The lyft bearer token is
   lyft_headers = {'Authorization' => 'bearer <<LYFT TOKEN GOES HERE>>'}
 ```
 
-Edit all occurances of <<REPLACE WITH HOME LAT>> and <<REPLACE WITH HOME LON>> with the lat and lon of your home/starting point
+Edit all occurances of ~~~<<REPLACE WITH HOME LAT>>~~~ and ~~~<<REPLACE WITH HOME LON>>~~~ with the lat and lon of your home/starting point
 
 ```css
       :url => 'https://api.uber.com/v1.2/estimates/price?start_latitude=<<REPLACE WITH HOME LAT>>&start_longitude=<<REPLACE WITH HOME LON>>&end_latitude='+ end_latitude + '&end_longitude=' + end_longitude,
@@ -68,18 +68,6 @@ Edit this data with lat, long of  popular endpoints
   {destination: 'Evergreen', coordinates: '37.323373, -121.771255'},
   {destination: 'San Francisco', coordinates: '37.615704, -122.390059'},
   {destination: 'Youtube', coordinates: '37.628367, -122.425932'}]
-```
-
-Edit this data with street addresses  of  popular endpoints
-
-```css
-    payload_data = [{ {destination: 'Downtown', address: '50 Fremont Street, San Francisco, CA'},
-    {destination: 'San Ramon', address: 'Ironwood Drive, San Ramon, CA'},
-    {destination: 'Fremont', address: '2000 Bart Way, Fremont, CA 94536'},
-    {destination: 'San Jose', address: '1701 Airport Blvd, San Jose, CA 95110'},
-    {destination: 'Evergreen', address: 'Chemin De Riviere, San Jose, CA 95148'},
-    {destination: 'San Francisco', address: 'San Francisco International Airport, San Francisco, CA 94128'},
-    {destination: 'Youtube', address: '901 Cherry Ave, San Bruno, CA 94066'}]
 ```
 
 Please do ensure that your destination preset names above are also reflected in the slot value configuration (see Intent Configuration  section above)
