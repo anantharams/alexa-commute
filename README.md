@@ -61,13 +61,12 @@ Edit this data with lat, long of  popular endpoints
 
 ```css
   payload_data = [{ {destination: 'Downtown', coordinates: '37.790616, -122.396968'},
-  {destination: 'Downtown', coordinates: '37.790616, -122.396968'},
   {destination: 'San Ramon', coordinates: '37.778564, -121.910870'},
   {destination: 'Fremont', coordinates: '37.556726, -121.977101'},
   {destination: 'San Jose', coordinates: '37.364957, -121.923813'},
   {destination: 'Evergreen', coordinates: '37.323373, -121.771255'},
   {destination: 'San Francisco', coordinates: '37.615704, -122.390059'},
-  {destination: 'Youtube', coordinates: '37.628367, -122.425932'}]
+  {destination: 'Customer', coordinates: '37.628367, -122.425932'}]
 ```
 
 Please do ensure that your destination preset names above are also reflected in the slot value configuration (see Intent Configuration  section above)
