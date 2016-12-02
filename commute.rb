@@ -177,36 +177,3 @@ post '/ride' do
 	end
 		
 end
-
- post '/commute'  do
-		request_object = JSON.parse(request.body.read, object_class: OpenStruct)
-		defaultslot = 'Downtown'		
-		if request_object.request.type == 'LaunchRequest'
-			slot = defaultslot
-		elsif request_object.request.type == 'IntentRequest'
-			slot = request_object.request.intent.slots.location.value
-			p 'Intent was'
-			p slot
-		else 
-			slot = 'Day care' 
-		p slot
-		end
-		 
-		# TODO : ADD YOUR FAVS!
-	  	payload_data = [{ {destination: 'Downtown', address: '50 Fremont Street, San Francisco, CA'},
-		{destination: 'San Ramon', address: 'Ironwood Drive, San Ramon, CA'},
-		{destination: 'Fremont', address: '2000 Bart Way, Fremont, CA 94536'},
-		{destination: 'San Jose', address: '1701 Airport Blvd, San Jose, CA 95110'},
-		{destination: 'Evergreen', address: 'Chemin De Riviere, San Jose, CA 95148'},
-		{destination: 'San Francisco', address: 'San Francisco International Airport, San Francisco, CA 94128'},
-		{destination: 'Youtube', address: '901 Cherry Ave, San Bruno, CA 94066'}]
-
-		if dest = payload_data.find { |dest| dest[:destination].casecmp(slot) == 0 }  
-			p dest[:address]
-			return_to_alexa = GoogleMapsAPIForCommute(slot, dest[:address])
-			p return_to_alexa
-		else
-			return_to_alexa = GoogleMapsAPIForCommute('Downtown', '50 Fremont,San Francisco')
-			p return_to_alexa
-		end
- end
