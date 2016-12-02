@@ -126,22 +126,6 @@ def ConstructRidePayload (destination, wait_time, ride_time, low_price, high_pri
 	return payload.to_json
 end
 
-def ConstructPayload(destination, duration, duration_in_traffic) 
-
-	payload = {
-	  "version" => "1.0",
-	  "sessionAttributes" => {},
-	  "response" => {
-	    "shouldEndSession" => true,
-	    "outputSpeech" => {
-	      "type" => "SSML",
-	      "ssml" => "<speak>Commute Time To #{destination} is #{duration} at this time normally and #{duration_in_traffic} in current traffic conditions </speak>"
-	    }
-	  }
-	}
-	#p payload.to_json
-	return payload.to_json
-end
 
 post '/ride' do
 	request_object = JSON.parse(request.body.read, object_class: OpenStruct)
